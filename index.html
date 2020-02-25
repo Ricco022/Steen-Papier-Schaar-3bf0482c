@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <div class="title">
+            <h1>Player <span id="playerID">1</span>, choose your option!</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm" onclick="sendChoice('paper')">
+                    <img src="img/paper.png" alt="paper">
+                    <p>Paper</p>
+                </div>
+                <div class="col-sm" onclick="sendChoice('rock')">
+                    <img src="img/rock.png" alt="rock">
+                    <p>Rock</p>
+                </div>
+                <div class="col-sm" onclick="sendChoice('scissors')">
+                    <img src="img/scissor.png" alt="scissors">
+                    <p>Scissors</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron" id="wonBlock" style="display: none;">
+        <h1 class="display-4" id="wonTitle"></h1>
+        <p class="lead" id="wonMessage"></p>
+        <hr class="my-4">
+        <a class="btn btn-outline-info btn-lg" role="button" onclick="reset()">Play again</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
